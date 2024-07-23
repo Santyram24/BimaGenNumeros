@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styleindex.css">
+    <title>Loteria</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('Ivg9gfa1AVC_GFQ2k');
+    </script>
+</head>
+
+<body>
+    <header class="encabezado">
+        <content class="logo">
+            <img class="imglogo" src="multimedia/imgbs.jpeg">
+            <h1 class="title">BIMA SOLUTIONS</h1>
+        </content>
+    </header>
+
+    <div class="presentacion">
+        <img class="comiC" src="multimedia/COMIC.GIF">
+    </div>
+    <div class="rifas">
+        <div class="contenedor0">
+            <content class="formu0">
+                <img class="imgrif0" src="multimedia/carcrg.jfif">
+                <p class="PRIFAS">CAR CRG 5 + UNIFORME</p>
+                <h1 type="text" id="txtpreciorif0" class="txtpreciorif0">15.000</h1>
+
+                <div class="btnsx">
+                    <button onclick="btnx3()" id="btnx3" class="btnx">X3</button>
+                    <button onclick="btnx6()" id="btnx6" class="btnx">X5</button>
+                    <button onclick="btnx9()" id="btnx9" class="btnx">X10</button>
+                </div>
+                <button onclick="comprarBoleta()" id="comprar-btn" class="btncompra">Comprar</button>
+            </content>
+        </div>
+    </div>
+    <div class="legalidad">
+        <content class="politicas">
+            <img class="imgpoliticas" src="multimedia/politica.png">
+            <p>Politicas & Privacidad</p>
+            <button class="btnpoliticas">Ver</button>
+        </content>
+        <content class="legal">
+            <img class="imglegalidad" src="multimedia/legalidad.png">
+            <p>Legalidad</p>
+            <button class="btnlegal">Ver</button>
+        </content>
+    </div>
+    <div class="foter">
+        <content class="foter1">
+            <p class="f0">BIMA SOLUTIONS</p>
+            <p class="f0">calle x # 120-64</p>
+            <p class="f0">382782923</p>
+        </content>
+        <content class="foter2">
+            <p>Desarrollador</p>
+            <img class="imgdesarrollador" src="multimedia/lf.png">
+        </content>
+    </div>
+    <p class="copy">° www.bimasolutions.com</p>
+
+    <p class="boletas-disponibles">Boletas disponibles: <span id="boletas-disponibles-count">100</span></p>
+    <button onclick="enviarTodosNumeros()" id="enviar-todos-numeros" class="btnenviar-todos-numeros">Enviar todos los números</button>
+
+    <div id="contenedorFormulario" class="contenedor-formulario" style="display: none;">
+        <form id="formulario" class="formulario" method="POST">
+            <div class="seccion1">
+                <label for="from_name">Nombre:</label>
+                <input type="text" id="from_name" name="from_name" required>
+                <br><br>
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+                <br><br>
+            </div>
+            <div class="seccion2">
+                <label for="email_id">Correo:</label>
+                <input type="email" id="email_id" name="email_id" required>
+                <br><br>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <br><br>
+                <label for="valorBoletaForm">Valor de la boleta:</label>
+                <input type="text" id="valorBoletaForm" name="valorBoleta" readonly>
+                <br><br>
+                <button class="btnenviar" type="submit" id="button">Enviar</button>
+                <button class="cerrar-formulario">X</button>
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
